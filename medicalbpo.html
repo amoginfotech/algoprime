@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoPrime Medical Billing Solutions</title>
+    <style>
+        :root {
+            --primary: #1e88e5;
+            --primary-dark: #0d47a1;
+            --secondary: #26a69a;
+            --dark: #263238;
+            --light: #f5f5f5;
+            --light-gray: #eceff1;
+            --accent: #ff5722;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .cta-button:hover {
+            background-color: #e64a19;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-heading h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-heading p {
+            font-size: 1.2rem;
+            color: var(--dark);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+        
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        
+        .service-card ul {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+        
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .ai-solutions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .ai-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 2rem;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .ai-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .ai-card p {
+            margin-bottom: 1rem;
+        }
+        
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .advantage-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .advantage-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .advantage-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .testimonial-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        
+        .testimonial-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 0.8rem;
+            background-color: var(--light-gray);
+            border-radius: 4px;
+            flex: 1;
+            margin: 0 0.5rem;
+        }
+        
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+        }
+        
+        .process-steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .step-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-dark);
+        }
+        
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            text-align: center;
+        }
+        
+        .pricing-card p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact {
+            background: linear-gradient(to right, var(--primary-dark), var(--primary));
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .contact h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .contact-method {
+            margin: 0 2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            margin-right: 0.8rem;
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin: 0 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-copyright {
+            width: 100%;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+            
+            .section-heading h2 {
+                font-size: 1.8rem;
+            }
+            
+            .process-steps {
+                padding: 0 1rem;
+            }
+            
+            .step {
+                grid-template-columns: 60px 1fr;
+                gap: 1rem;
+            }
+            
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-links {
+                margin: 1.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="hero">
+                <h1>AlgoPrime Medical Billing Solutions</h1>
+                <h2>AI-Powered Excellence in Revenue Cycle Management</h2>
+                <a href="#contact" class="cta-button">Request Free Assessment</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Who We Are</h2>
+                <p>AlgoPrime: Where Experience Meets Innovation</p>
+            </div>
+            
+            <div class="advantages">
+                <div class="advantage-card">
+                    <div class="advantage-icon">★</div>
+                    <h3>20+ Years Experience</h3>
+                    <p>Proven IT consulting & software development expertise serving healthcare providers globally</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🌐</div>
+                    <h3>Global Delivery</h3>
+                    <p>Seamless onshore/offshore delivery model with state-of-the-art infrastructure in Bangalore, India</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">💻</div>
+                    <h3>Technology Excellence</h3>
+                    <p>Cutting-edge solutions integrating AI technologies with proven medical billing expertise</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🔒</div>
+                    <h3>Compliance Expertise</h3>
+                    <p>HIPAA, HITECH and regulatory compliance guaranteed with secure data handling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Medical Billing Services</h2>
+                <p>Comprehensive End-to-End Revenue Cycle Management</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">1</div>
+                    <h3>Patient Registration & Eligibility Verification</h3>
+                    <ul>
+                        <li>Insurance verification</li>
+                        <li>Benefit confirmation</li>
+                        <li>Patient demographic validation</li>
+                        <li>Real-time eligibility checks</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">2</div>
+                    <h3>Charge Entry & Coding</h3>
+                    <ul>
+                        <li>CPT/ICD-10 coding accuracy</li>
+                        <li>Charge capture optimization</li>
+                        <li>Documentation compliance</li>
+                        <li>Coding audit services</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">3</div>
+                    <h3>Claims Submission & Follow-up</h3>
+                    <ul>
+                        <li>Clean claim submission</li>
+                        <li>Denial management</li>
+                        <li>Appeals processing</li>
+                        <li>Payer follow-up</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">4</div>
+                    <h3>Payment Posting & Reconciliation</h3>
+                    <ul>
+                        <li>ERA/EOB processing</li>
+                        <li>Payment reconciliation</li>
+                        <li>Patient billing</li>
+                        <li>Adjustment processing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">5</div>
+                    <h3>Accounts Receivable Management</h3>
+                    <ul>
+                        <li>Aging analysis</li>
+                        <li>Collections optimization</li>
+                        <li>Revenue recovery</li>
+                        <li>Cash flow improvement</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">6</div>
+                    <h3>Reporting & Analytics</h3>
+                    <ul>
+                        <li>Custom performance dashboards</li>
+                        <li>Financial analytics</li>
+                        <li>Trend analysis</li>
+                        <li>Revenue forecasting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="ai-solutions">
+        <div class="container">
+            <div class="section-heading">
+                <h2>AI-Powered Medical Billing</h2>
+                <p>How AlgoPrime Leverages AI to Transform Revenue Cycle Management</p>
+            </div>
+            
+            <div class="ai-solutions">
+                <div class="ai-card">
+                    <h3>AI-Driven Coding Automation</h3>
+                    <p>Our natural language processing algorithms extract billing codes from clinical documentation with unprecedented accuracy, automating the coding process while ensuring compliance.</p>
+                    <ul>
+                        <li>99.5% coding accuracy</li>
+                        <li>70% faster processing time</li>
+                        <li>Continuous learning from coding patterns</li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card">
+                    <h3>Predictive Denial Management</h3>
+                    <p>Machine learning algorithms identify potential claim denials before submission, dramatically reducing rejection rates and accelerating cash flow.</p>
+                    <ul>
+                        <li>Proactive denial prevention</li>
+                        <li>Root cause analysis</li>
+                        <li>Automated correction recommendations</li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card">
+                    <h3>Intelligent Document Processing</h3>
+                    <p>Our AI solutions automatically extract relevant information from clinical notes, EOBs, and medical records with minimal human intervention.</p>
+                    <ul>
+                        <li>Automated data extraction</li>
+                        <li>99.5% accuracy in data capture</li>
+                        <li>Reduced manual processing time</li>
+                    </ul>
+                </div>
+                
+                <div class="ai-card">
+                    <h3>Revenue Forecasting</h3>
+                    <p>AI-powered analytics predict payment cycles and identify opportunities for revenue optimization with remarkable precision.</p>
+                    <ul>
+                        <li>Cash flow prediction</li>
+                        <li>Reimbursement trend analysis</li>
+                        <li>Financial planning tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="success-stories">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Client Success Stories</h2>
+                <p>Proven Results Across Healthcare Specialties</p>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <h3>Multi-Specialty Practice Group</h3>
+                    <p>AlgoPrime transformed our billing operations, delivering remarkable improvements in efficiency and revenue capture while reducing our administrative burden.</p>
+                    <div class="testimonial-stats">
+                        <div class="stat">
+                            <div class="stat-number">32%</div>
+                            <div class="stat-label">Reduction in Denials</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">21%</div>
+                            <div class="stat-label">Faster Payments</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">$2.4M</div>
+                            <div class="stat-label">Additional Revenue</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3>Regional Hospital Network</h3>
+                    <p>Implementing AlgoPrime's AI-powered billing solutions resulted in dramatic improvements across our revenue cycle, from front-end registration to collections.</p>
+                    <div class="testimonial-stats">
+                        <div class="stat">
+                            <div class="stat-number">45%</div>
+                            <div class="stat-label">Decrease in AR Days</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">28%</div>
+                            <div class="stat-label">Improved Clean Claims</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">$3.8M</div>
+                            <div class="stat-label">Increased Collections</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3>Specialty Surgery Center</h3>
+                    <p>AlgoPrime's specialized knowledge of our billing requirements and AI-driven workflow automation delivered outstanding results for our practice.</p>
+                    <div class="testimonial-stats">
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Clean Claim Rate</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">19%</div>
+                            <div class="stat-label">Cost Reduction</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">35%</div>
+                            <div class="stat-label">Faster Payments</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="implementation">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Implementation Process</h2>
+                <p>Seamless Transition to Enhanced Revenue Management</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Assessment & Discovery</h3>
+                        <p>We begin with a comprehensive analysis of your current workflows, identifying inefficiencies and establishing performance baselines to set clear improvement targets.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Custom Solution Design</h3>
+                        <p>Our experts design a tailored workflow configuration that integrates with your existing systems and customizes our AI models to your specific practice needs.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Implementation & Training</h3>
+                        <p>We handle the technical integration while providing comprehensive training to your staff, ensuring a smooth transition with minimal disruption to your operations.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Continuous Improvement</h3>
+                        <p>Our process doesn't end at implementation. We conduct regular performance reviews, continuously refine our AI models, and optimize processes to deliver ever-improving results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Flexible Pricing Models</h2>
+                <p>Options Designed to Meet Your Specific Needs</p>
+            </div>
+            
+            <div class="pricing">
+                <div class="pricing-card">
+                    <h3>Percentage of Collections</h3>
+                    <p>Our success is directly tied to yours with this performance-based model, creating perfectly aligned incentives for maximum revenue capture.</p>
+                    <p>Ideal for practices looking to maximize collections while maintaining predictable costs as a percentage of revenue.</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Fixed Fee per Claim</h3>
+                    <p>Enjoy complete cost predictability with our transparent per-claim pricing structure, with volume-based discounts available for larger practices.</p>
+                    <p>Perfect for organizations that prefer stable, predictable billing expenses regardless of collection rates.</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Hybrid Models</h3>
+                    <p>We can design customized pricing solutions that combine fixed and variable components to perfectly align with your specific requirements and goals.</p>
+                    <p>Best for complex organizations with diverse billing needs across different departments or specialties.</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Value-Based Options</h3>
+                    <p>Our innovative shared savings arrangements tie our compensation directly to the measurable improvements we deliver in your revenue cycle.</p>
+                    <p>Ideal for practices focused on ROI and looking for a true partnership approach to medical billing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Begin Your Revenue Transformation Journey</h2>
+            <p>Contact us today for a complimentary Revenue Cycle Assessment</p>
+            <a href="#" class="cta-button">Request Free Assessment</a>
+            
+            <div class="contact-info">
+                <div class="contact-method">
+                    <span class="contact-icon">✉️</span>
+                    <span>sales@algoprime.in</span>
+                </div>
+                <div class="contact-method">
+                    <span class="contact-icon">📞</span>
+                    <span>+91 9108873817</span>
+                </div>
+                <div class="contact-method">
+                    <span class="contact-icon">🌐</span>
+                    <span>www.algoprime.in</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AlgoPrime</div>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#ai-solutions">AI Solutions</a></li>
+                    <li><a href="#success-stories">Success Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                © 2025 AlgoPrime Medical Billing Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

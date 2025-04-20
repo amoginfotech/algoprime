@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="service-details-page">
+
+  <div id="header-container"></div>
+  <div id="nav-container"></div>
+  <script src="assets/js/main.js"></script>
+  <script>
+    Promise.all([
+      fetch('header.html'),
+    ])
+    .then(responses => Promise.all(responses.map(res => res.text())))
+    .then(data => {
+      document.getElementById('header-container').innerHTML = data[0];
+      document.getElementById('nav-container').innerHTML = data[1];
+    });
+  </script>
+
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Intelligence for Your Unique Needs</li>
+          </ol>
+        </nav>
+        <h1>Custom Software Solutions</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+      <div class="container">
+        <div class="section-title">
+          <h2>AlgoPrime Custom Software Solutions</h2>
+          <p>We build bespoke AI solutions addressing your specific business challenges</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up">
+              <div class="icon mb-4">
+                <i class="bi bi-file-earmark-text text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Intelligent Document Processing</a></h4>
+              <p>Transform how your organization handles documents with our AI-powered analysis and extraction systems.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Automated data extraction</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Document classification</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Content summarization</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> OCR and handwriting recognition</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Multi-format document support</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Intelligent data validation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon mb-4">
+                <i class="bi bi-eye text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Computer Vision Solutions</a></h4>
+              <p>Implement advanced computer vision systems for quality control, safety monitoring, and visual inspection tasks.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Defect detection</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Safety compliance monitoring</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Visual data analysis</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Real-time object tracking</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Facial recognition systems</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Quality assurance automation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon mb-4">
+                <i class="bi bi-chat-dots text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Conversational AI</a></h4>
+              <p>Create intelligent virtual assistants and chatbots that understand context and deliver meaningful customer interactions.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Natural language understanding</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Contextual responses</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Multi-channel integration</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Sentiment analysis</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 24/7 automated support</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Multilingual capabilities</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon mb-4">
+                <i class="bi bi-graph-up text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Predictive Analytics</a></h4>
+              <p>Leverage the power of predictive models and business intelligence to make data-driven decisions with confidence.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Trend forecasting</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Interactive dashboards</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Anomaly detection</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Risk assessment modeling</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Customer behavior analysis</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Real-time data insights</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon mb-4">
+                <i class="bi bi-gear text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Process Automation</a></h4>
+              <p>Transform manual workflows into intelligent automated processes that save time and reduce errors.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Workflow optimization</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Intelligent decision systems</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Integration with existing tools</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Custom workflow triggers</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Error reduction systems</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Performance monitoring</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon mb-4">
+                <i class="bi bi-cpu text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Custom AI Models</a></h4>
+              <p>Develop tailored machine learning models designed specifically for your unique business requirements.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Domain-specific training</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Performance optimization</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Continuous improvement</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Scalable architecture</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Custom model deployment</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Model monitoring & updates</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="600">
+              <div class="icon mb-4">
+                <i class="bi bi-database-gear text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Data Preparation & Analytics</a></h4>
+              <p>Transform raw data into actionable insights with our comprehensive data preparation and analytics services.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Data cleaning & preprocessing</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Feature engineering</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Data quality assessment</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Statistical analysis</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Data visualization</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> ETL pipeline development</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="700">
+              <div class="icon mb-4">
+                <i class="bi bi-robot text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">Agentic AI Solutions</a></h4>
+              <p>Leverage autonomous AI agents that can understand, learn, and execute complex tasks with minimal human intervention.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Task automation agents</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Decision-making systems</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Multi-agent coordination</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Adaptive learning</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Goal-oriented execution</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Real-time optimization</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item card shadow-sm h-100" data-aos="fade-up" data-aos-delay="800">
+              <div class="icon mb-4">
+                <i class="bi bi-braces-asterisk text-primary fs-1"></i>
+              </div>
+              <h4><a href="#">AI Prompting & Model Training</a></h4>
+              <p>Expert services in AI model training and prompt engineering to maximize the potential of language models.</p>
+              <ul class="service-list list-unstyled mt-4">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Prompt optimization</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Custom model fine-tuning</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Training data curation</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Performance evaluation</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Prompt strategy development</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Integration support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="index.html#contact" class="btn-get-started scrollto">Contact us</a>
+        </div>
+      </div>
+    </section><!-- End Service Details Section -->
+  </main>
+
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

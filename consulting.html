@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="service-details-page">
+
+  <div id="header-container"></div>
+  <div id="nav-container"></div>
+  <script src="assets/js/main.js"></script>
+  <script>
+    Promise.all([
+      fetch('header.html'),
+    ])
+      .then(responses => Promise.all(responses.map(res => res.text())))
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data[0];
+        document.getElementById('nav-container').innerHTML = data[1];
+      });
+  </script>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Reimagine Your Business</li>
+          </ol>
+        </nav>
+        <h1>Reimagine Your Business with AI-Power</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="section-title">
+          <h2>AI-Driven IT Consulting</h2>
+          <p>Transform your business through strategic AI implementation and expert guidance</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <p>At AlgoPrime, we understand that successful AI implementation requires more than just technical knowledge—it demands a comprehensive understanding of your business objectives, processes, and culture. Our AI-driven IT consulting services provide end-to-end guidance from initial assessment through implementation and beyond, ensuring that your AI investments deliver measurable business value.</p>
+            <p>Our team of seasoned consultants combines deep technical expertise with business acumen to help you navigate the complex AI landscape and build a technology foundation that drives innovation and competitive advantage.</p>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-bar-chart-line fs-1 text-primary"></i></div>
+              <h4><a href="">AI Readiness Assessment</a></h4>
+              <p>We conduct comprehensive evaluations of your current technology stack, data infrastructure, and organizational capabilities to identify opportunities and challenges for AI adoption. Our proprietary assessment framework examines technical, operational, and cultural dimensions to create a detailed readiness report with actionable insights.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-lightning fs-1 text-primary"></i></div>
+              <h4><a href="">AI Strategy Development</a></h4>
+              <p>Our consultants work with your leadership team to develop a tailored AI roadmap aligned with your business objectives. We prioritize use cases based on business impact, technical feasibility, and implementation effort, ensuring quick wins while building toward transformative capabilities.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-hdd-network fs-1 text-primary"></i></div>
+              <h4><a href="">MLOps Infrastructure Design</a></h4>
+              <p>We design and implement robust infrastructure for machine learning operations that enables seamless development, deployment, and monitoring of AI models. Our approach emphasizes scalability, governance, and security while minimizing technical debt.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-arrow-repeat fs-1 text-primary"></i></div>
+              <h4><a href="">Legacy System Transformation</a></h4>
+              <p>Our experts help modernize your existing systems by integrating AI capabilities that enhance functionality while preserving critical business logic. We develop custom APIs, microservices architectures, and integration layers that connect legacy systems with modern AI tools.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-shield-check fs-1 text-primary"></i></div>
+              <h4><a href="">Ethical AI Governance</a></h4>
+              <p>We establish comprehensive frameworks for responsible AI deployment that address bias, transparency, privacy, and regulatory compliance. Our governance models include monitoring mechanisms, audit trails, and explainability tools to ensure AI systems operate ethically and maintain stakeholder trust.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-people fs-1 text-primary"></i></div>
+              <h4><a href="">AI Change Management</a></h4>
+              <p>We guide your organization through the cultural and operational changes required for successful AI adoption. Our change management programs include stakeholder engagement, training initiatives, and communication strategies that build understanding and enthusiasm for AI-driven transformation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title mt-5">
+          <h3>Specialized AI Consulting Services</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-robot fs-1 text-primary"></i></div>
+              <h4><a href="">Generative AI Implementation</a></h4>
+              <p>Leverage the power of large language models and generative AI for content creation, customer service, and knowledge management. We help you implement GPT and other generative models with appropriate guardrails and integration points.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-camera-video fs-1 text-primary"></i></div>
+              <h4><a href="">Computer Vision Solutions</a></h4>
+              <p>Transform visual data into actionable insights with our computer vision consulting services. We design and implement solutions for quality control, safety monitoring, inventory management, and customer analytics.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-graph-up fs-1 text-primary"></i></div>
+              <h4><a href="">Predictive Analytics Systems</a></h4>
+              <p>Build forecasting and decision support systems that leverage your historical data to predict trends, identify opportunities, and mitigate risks. Our predictive solutions integrate seamlessly with your existing business processes.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-gear-wide-connected fs-1 text-primary"></i></div>
+              <h4><a href="">AI-Powered Process Automation</a></h4>
+              <p>Identify and automate high-value business processes using intelligent workflows that combine RPA with machine learning for adaptive, cognitive automation capabilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-bank fs-1 text-primary"></i></div>
+              <h4><a href="">Case Study: Financial Services Transformation</a></h4>
+              <p>A mid-sized financial institution partnered with AlgoPrime to modernize their customer service and risk assessment capabilities. Our consulting team designed and implemented an AI strategy that included:</p>
+              <ul>
+                <li>A conversational AI system that reduced call center volume by 37%</li>
+                <li>An ML-based risk scoring model that improved loan decision accuracy by 22%</li>
+                <li>A document processing pipeline that reduced processing time from days to minutes</li>
+              </ul>
+              <p>The implementation resulted in $4.2M annual operational savings and a 28% improvement in customer satisfaction scores.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-building-gear fs-1 text-primary"></i></div>
+              <h4><a href="">Case Study: Manufacturing Intelligence</a></h4>
+              <p>AlgoPrime helped a manufacturing client implement an AI-driven quality control and predictive maintenance system across their production facilities. Our consultants:</p>
+              <ul>
+                <li>Designed a computer vision system that detected defects with 99.3% accuracy</li>
+                <li>Implemented IoT sensors and predictive models that reduced equipment downtime by 43%</li>
+                <li>Created a unified data platform that provided real-time visibility across operations</li>
+              </ul>
+              <p>The solution delivered $7.5M in annual cost savings through reduced waste and improved equipment reliability.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="#contact" class="btn-get-started scrollto">Schedule a Consultation</a>
+        </div>
+
+      </div>
+
+    </section><!-- End Service Details Section -->
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

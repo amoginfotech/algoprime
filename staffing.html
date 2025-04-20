@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  
+</head>
+
+<body class="service-details-page">
+
+  <div id="header-container"></div>
+  <div id="nav-container"></div>
+      <script src="assets/js/main.js"></script>
+      <script>
+        Promise.all([
+          fetch('header.html'),
+        ])
+        .then(responses => Promise.all(responses.map(res => res.text())))
+        .then(data => {
+          document.getElementById('header-container').innerHTML = data[0];
+          document.getElementById('nav-container').innerHTML = data[1];
+        });
+      </script>
+
+     
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Next-Gen AI Talent</li>
+          </ol>
+        </nav>
+        <h1>Access specialized Gen-Z professionals trained in cutting-edge AI skills</h1>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Next-Gen AI Talent Solutions</h2>
+          <p>Access specialized Gen-Z professionals trained in cutting-edge AI skills</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <p>At AlgoPrime, we bridge the AI skills gap by providing access to our pool of specially trained Gen-Z professionals. Our innovative approach combines rigorous AI training with flexible engagement models to ensure you have the right expertise for your AI initiatives without the challenges of recruiting and retaining specialized talent.</p>
+            <p>Our talent solutions are designed to integrate seamlessly with your team, providing the specific skills you need when you need them, whether for short-term projects or long-term partnerships.</p>
+          </div>
+        </div>
+
+        <div class="section-title mt-5">
+          <h3>Our Specialized AI Training Program</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-robot fs-1 text-primary"></i></div>
+              <h4><a href="">Advanced GPT Engineering</a></h4>
+              <p>Our talent pool includes specialists in building and fine-tuning large language models for specific business applications. They understand prompt engineering, model optimization, and the implementation of guardrails for safe and effective generative AI solutions.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-chat-text fs-1 text-primary"></i></div>
+              <h4><a href="">Prompt Engineering Excellence</a></h4>
+              <p>Our professionals are trained in the art and science of crafting effective prompts that unlock the full potential of AI models. They create prompt libraries, develop systematic approaches to prompt optimization, and build robust prompt management systems.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-cpu fs-1 text-primary"></i></div>
+              <h4><a href="">AI Agent Development</a></h4>
+              <p>Our talent specializes in creating autonomous AI agents that can perform complex tasks with minimal supervision. They design agent architectures, implement reasoning frameworks, and develop coordination mechanisms for multi-agent systems.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-database-gear fs-1 text-primary"></i></div>
+              <h4><a href="">Data Preparation Excellence</a></h4>
+              <p>Our professionals excel at curating, cleaning, and structuring data for machine learning applications. They understand data quality requirements, annotation protocols, and synthetic data generation techniques that ensure your AI models perform at their best.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-puzzle fs-1 text-primary"></i></div>
+              <h4><a href="">Integration Expertise</a></h4>
+              <p>Our talent is skilled at seamlessly connecting AI components with existing business systems. They develop APIs, implement middleware solutions, and create workflows that ensure your AI investments deliver real operational value.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title mt-5">
+          <h3>Why Gen-Z Talent?</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-globe fs-1 text-primary"></i></div>
+              <h4><a href="">Digital Native Perspective</a></h4>
+              <p>Our Gen-Z professionals bring an intuitive understanding of digital ecosystems and user experiences that translates into more intuitive and effective AI solutions. Their lifelong immersion in technology provides unique insights into how AI can best serve end users.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-arrows-angle-expand fs-1 text-primary"></i></div>
+              <h4><a href="">Adaptability & Learning Agility</a></h4>
+              <p>Our talent demonstrates exceptional speed in learning and adapting to rapidly evolving AI technologies. Their educational background in the era of AI means they approach problems with a flexibility and openness that accelerates innovation.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-people fs-1 text-primary"></i></div>
+              <h4><a href="">Collaborative Mindset</a></h4>
+              <p>Having grown up in highly connected environments, our professionals excel at distributed, cross-functional teamwork. They communicate effectively across technical and business domains, facilitating smooth implementation of AI solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title mt-5">
+          <h3>Flexible Engagement Models</h3>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-6">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white d-flex flex-column" data-aos="fade-up" style="min-height: 350px;">
+              <div class="icon mb-4"><i class="bi bi-kanban fs-1 text-primary"></i></div>
+              <h4><a href="">Project-Based Staffing</a></h4>
+              <p>Access specialized teams assembled specifically for your project needs with:</p>
+              <ul class="mt-auto">
+                <li>Carefully matched skillsets based on project requirements</li>
+                <li>Transparent project scoping and milestone planning</li>
+                <li>Dedicated project management and quality assurance</li>
+                <li>Seamless knowledge transfer upon project completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white d-flex flex-column" data-aos="fade-up" style="min-height: 350px;">
+              <div class="icon mb-4"><i class="bi bi-calendar-check fs-1 text-primary"></i></div>
+              <h4><a href="">Embedded AI Teams</a></h4>
+              <p>Integrate our AI professionals directly into your existing teams:</p>
+              <ul class="mt-auto">
+                <li>Dedicated talent aligned with your organization's workflow and tools</li>
+                <li>Flexible scaling as project needs evolve</li>
+                <li>Regular skill refreshment to keep pace with AI advances</li>
+                <li>Options for knowledge transfer and internal capability building</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white d-flex flex-column" data-aos="fade-up" style="min-height: 350px;">
+              <div class="icon mb-4"><i class="bi bi-lightning fs-1 text-primary"></i></div>
+              <h4><a href="">Rapid Response Teams</a></h4>
+              <p>Get immediate access to AI expertise for time-sensitive initiatives:</p>
+              <ul class="mt-auto">
+                <li>Pre-assembled teams ready for quick deployment</li>
+                <li>Accelerated onboarding and project kickoff</li>
+                <li>Specialized in agile methodologies for fast iteration</li>
+                <li>Experience in high-pressure, time-constrained environments</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white d-flex flex-column" data-aos="fade-up" style="min-height: 350px;">
+              <div class="icon mb-4"><i class="bi bi-mortarboard fs-1 text-primary"></i></div>
+              <h4><a href="">AI Capability Building</a></h4>
+              <p>Develop your internal AI expertise through structured knowledge transfer:</p>
+              <ul class="mt-auto">
+                <li>Hands-on training and mentorship from our professionals</li>
+                <li>Custom learning paths for your team members</li>
+                <li>Collaborative project work with guided practice</li>
+                <li>Gradual transition from supported to independent operations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="service-item shadow-lg rounded p-4 h-100 bg-white" data-aos="fade-up">
+              <div class="icon mb-4"><i class="bi bi-trophy fs-1 text-primary"></i></div>
+              <h4><a href="">Our Talent Advantage</a></h4>
+              <p>What sets AlgoPrime's talent solutions apart:</p>
+              <ul>
+                <li><strong>Rigorous Selection Process:</strong> Less than 5% of applicants join our talent pool after thorough technical assessments and situational interviews</li>
+                <li><strong>Continuous Learning Program:</strong> Our professionals receive ongoing training in the latest AI techniques and tools, ensuring they stay at the cutting edge</li>
+                <li><strong>Industry Experience:</strong> Our talent works across diverse sectors, bringing cross-industry insights and best practices to your projects</li>
+                <li><strong>Quality Assurance:</strong> All work undergoes peer review and meets strict quality standards before delivery</li>
+                <li><strong>Business Alignment:</strong> Our professionals are trained to understand business contexts, not just technical requirements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="index.html#contact" class="btn-get-started scrollto">Discuss Your Talent Needs</a>
+        </div>
+
+    </section><!-- /Service Details Section -->
+
+  </main>
+
+  <div id="footer-container"></div>
+      <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+          });
+      </script>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

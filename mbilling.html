@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>404 - Algoprime</title>
+  <title>Service Details</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -26,23 +26,27 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  
 </head>
 
-<body class="page-404">
+<body class="service-details-page">
 
   <div id="header-container"></div>
   <div id="nav-container"></div>
-  <script src="assets/js/main.js"></script>
-  <script>
-    Promise.all([
-      fetch('header.html'),
-    ])
-    .then(responses => Promise.all(responses.map(res => res.text())))
-    .then(data => {
-      document.getElementById('header-container').innerHTML = data[0];
-      document.getElementById('nav-container').innerHTML = data[1];
-    });
-  </script>
+      <script src="assets/js/main.js"></script>
+      <script>
+        Promise.all([
+          fetch('header.html'),
+        ])
+        .then(responses => Promise.all(responses.map(res => res.text())))
+        .then(data => {
+          document.getElementById('header-container').innerHTML = data[0];
+          document.getElementById('nav-container').innerHTML = data[1];
+        });
+      </script>
+
+     
 
   <main class="main">
 
@@ -52,61 +56,37 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">404</li>
+            <li class="current">Medical Billing Service</li>
           </ol>
         </nav>
-        <h1>Page Not Found</h1>
+        <h1>AlgoPrime Medical Billing Solutions</h1>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Error 404 Section -->
-    <section id="error-404" class="error-404 section">
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
-        <div class="text-center">
-          <div class="error-icon mb-4" data-aos="zoom-in" data-aos-delay="200">
-            <i class="bi bi-exclamation-circle"></i>
-          </div>
-
-          <h1 class="error-code mb-4" data-aos="fade-up" data-aos-delay="300">404</h1>
-
-          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">Oops! Page Not Found</h2>
-
-          <p class="error-text mb-4" data-aos="fade-up" data-aos-delay="500">
-            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-          </p>
-
-          <div class="search-box mb-4" data-aos="fade-up" data-aos-delay="600">
-            <form action="#" class="search-form">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for pages..." aria-label="Search">
-                <button class="btn search-btn" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <div class="error-action" data-aos="fade-up" data-aos-delay="700">
-            <a href="/" class="btn btn-primary">Back to Home</a>
-          </div>
+        <div class="section-title">
+          <h2>Comprehensive End-to-End Revenue Cycle Management</h2>
+          <p>AlgoPrime delivers intelligent BPO solutions powered by cutting-edge AI and a dynamic Gen-Z workforce, providing unparalleled efficiency, accuracy, and innovation for the medical, financial, and insurance sectors. We go beyond traditional outsourcing, offering a risk-free environment to pilot AI-driven process optimization.</p>
         </div>
 
-      </div>
 
-    </section><!-- /Error 404 Section -->
+
+</section><!-- /Service Details Section -->
 
   </main>
 
   <div id="footer-container"></div>
-  <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-      });
-  </script>
+      <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+          });
+      </script>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

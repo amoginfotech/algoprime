@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -8,6 +8,14 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+env:
+  SECURITY_HEADERS: |
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+    X-Content-Type-Options: nosniff
+    X-Frame-Options: DENY
+    X-XSS-Protection: 1; mode=block
+    Content-Security-Policy: upgrade-insecure-requests
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -41,3 +49,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          headers: |
+            Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+            X-Content-Type-Options: nosniff
+            X-Frame-Options: DENY
+            X-XSS-Protection: 1; mode=block
+            Content-Security-Policy: upgrade-insecure-requests

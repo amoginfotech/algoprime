@@ -34,14 +34,11 @@
   <div id="nav-container"></div>
   <script src="assets/js/main.js"></script>
   <script>
-    Promise.all([
-      fetch('header.html'),
-    ])
-    .then(responses => Promise.all(responses.map(res => res.text())))
-    .then(data => {
-      document.getElementById('header-container').innerHTML = data[0];
-      document.getElementById('nav-container').innerHTML = data[1];
-    });
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
   </script>
 
   <main class="main">

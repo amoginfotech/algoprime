@@ -151,6 +151,14 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Initialize GLightbox after script is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      const glightbox = GLightbox({
+        selector: '.glightbox'
+      });
+    });
+  </script>
 
 </body>
 
